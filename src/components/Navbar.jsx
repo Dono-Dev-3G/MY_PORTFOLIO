@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = ({ t, toggleLanguage }) => {
 
@@ -9,8 +10,14 @@ const Navbar = ({ t, toggleLanguage }) => {
         { name: t.home, to: '/' },
         { name: t.about, to: '/en-developpement' },
         { name: t.projects, to: '/projets' },
-        { name: t.contact, to: '/en-developpement' },
+        { name: t.contact, to: '/#contact', isHash: true },
     ];
+
+    const scrollWithOffset = (el) => {
+        setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+    };
 
     return (
         
@@ -45,13 +52,24 @@ const Navbar = ({ t, toggleLanguage }) => {
                         <li className="w-full active:bg-black/20 active:scale-95 transition-all duration-100 rounded" 
                             key={link.name}
                         >
-                            <Link  
-                                to={link.to}
-                                onClick={() => setIsOpen(false)}
-                                className="block w-full p-2"
-                            >
-                                {link.name}
-                            </Link>
+                            {link.isHash ? (
+                                <HashLink  
+                                    to={link.to}
+                                    scroll={scrollWithOffset}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full p-2"
+                                >
+                                    {link.name}
+                                </HashLink>
+                            ) : (
+                                <Link  
+                                    to={link.to}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full p-2"
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
                         </li>
                     ))}
                     {/* Mobile Language Button */}
@@ -70,9 +88,22 @@ const Navbar = ({ t, toggleLanguage }) => {
                 <ul className="hidden lg:flex space-x-8">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <Link to={link.to} className="text-main-text hover:text-sage active:text-main-text transition-colors duration-300 font-medium">
-                                {link.name}
-                            </Link>
+                            {link.isHash ? (
+                                <HashLink 
+                                    to={link.to} 
+                                    scroll={scrollWithOffset}
+                                    className="text-main-text hover:text-sage active:text-main-text transition-colors duration-300 font-medium"
+                                >
+                                    {link.name}
+                                </HashLink>
+                            ) : (
+                                <Link 
+                                    to={link.to} 
+                                    className="text-main-text hover:text-sage active:text-main-text transition-colors duration-300 font-medium"
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
                         </li>
                     ))}
                     {/* Desktop Language Button */}

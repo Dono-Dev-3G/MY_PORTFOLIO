@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Reports from './components/Reports';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import Legal from './pages/Legal';
@@ -36,6 +38,8 @@ function App() {
                 <>
                   <Hero t={t.hero} toggleLanguage={toggleLanguage}/>
                   <Reports t={t.reports} toggleLanguage={toggleLanguage}/>
+                  <Certifications t={t.certifications} lang={language} />
+                  <Contact t={t.contact} />
                 </>
               }
             />
