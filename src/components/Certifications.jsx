@@ -80,7 +80,7 @@ const Certifications = ({ t, lang }) => {
       {/* Bouton d'action de fin de section */}
       <div className="text-center">
         <Link
-          to="/en-developpement"
+          to="/a-propos"
           className="inline-block text-xs font-mono border border-sage bg-sage/5 text-sage px-6 py-3 rounded font-bold uppercase tracking-wider hover:bg-sage hover:text-dark-bg transition-all duration-300 shadow-[0_0_15px_rgba(168,195,185,0.1)]"
         >
           {t.button}

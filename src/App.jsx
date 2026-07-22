@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Reports from './components/Reports';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import About from './pages/About';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import Legal from './pages/Legal';
@@ -44,11 +45,11 @@ function App() {
               }
             />
 
+            <Route path="/a-propos" element={<About lang={language} />} />
+
             <Route path="/projets" element={<Projects lang={language} />} />
 
             <Route path="/mentions-legales" element={<Legal lang={language} />} />
-
-            <Route path="/en-developpement" element={<UnderDevelopment lang={language} />} />
 
           </Routes>
         </main>

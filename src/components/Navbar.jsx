@@ -8,7 +8,7 @@ const Navbar = ({ t, toggleLanguage }) => {
 
     const navLinks = [
         { name: t.home, to: '/' },
-        { name: t.about, to: '/en-developpement' },
+        { name: t.about, to: '/a-propos' },
         { name: t.projects, to: '/projets' },
         { name: t.contact, to: '/#contact', isHash: true },
     ];
