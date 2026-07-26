@@ -613,7 +613,7 @@ C:\\Windows\\system32\\rundll32.exe C:\\Windows\\system32\\inetcpl.cpl,ClearMyTr
                 time: "Feb 21st 2026 at 19:16",
                 severity: "Low",
                 verdict: "True Positive",
-                analysis: "On michael Ascott’s endpoint win-3450 download of malicious script PowerView.ps1 responsible for start of data breach and running of Robocopy.exe responsible for exfiltration of data.",
+                analysis: "On Michael Ascott’s endpoint win-3450 download of malicious script PowerView.ps1 responsible for start of data breach and running of Robocopy.exe responsible for exfiltration of data.",
                 remediation: "Contain victim endpoint, block outgoing data."
             },
             {

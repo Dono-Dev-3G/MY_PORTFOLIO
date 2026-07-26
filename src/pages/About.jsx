@@ -10,9 +10,9 @@ const About = ({ lang = 'fr' }) => {
 
   // 1. Certifications Officielles
   const officialCerts = [
-    { name: "Google Cybersecurity", issuer: "Google", desc: t.googleDesc, status: "obtained", logo: "/images/google_badge.png", pdf: "/certs/google_cyber.pdf" },
+    { name: "Blue Team Level 1 (BTL1)", issuer: "Centri", desc: t.btl1Desc, status: "obtained", logo: "/images/btl1_badge.png", pdf: "/certs/btl1.pdf" },
     { name: "CompTIA Security+", issuer: "CompTIA", desc: t.comptiaDesc, status: "obtained", logo: "/images/comptia_badge.png", pdf: "/certs/security_plus.pdf" },
-    { name: "Blue Team Level 1 (BTL1)", issuer: "Centri", desc: t.btl1Desc, status: "in_progress", logo: "/images/btl1_badge.png", pdf: null },
+    { name: "Google Cybersecurity", issuer: "Google", desc: t.googleDesc, status: "obtained", logo: "/images/google_badge.png", pdf: "/certs/google_cyber.pdf" },
   ];
 
   // 2. Chemins TryHackMe
