@@ -18,7 +18,7 @@ const Certifications = ({ t, lang }) => {
     {
       name: "Blue Team Level 1 (BTL1)",
       issuer: "Centri",
-      status: "in_progress",
+      status: "obtained",
       logo: "/images/btl1_badge.png"
     }
   ];
